@@ -14,9 +14,10 @@ type Employee struct {
 	ManagerID int 
 }
 var employees []Employee;
-func main() {
+func init() {
 	var yusuf Employee;
 
+	fmt.Println()
 	yusuf.Name = "Adeniyi Yusuf"
 	yusuf.Position = "Software Engineer"
 	employees = append(employees, yusuf);
@@ -34,4 +35,24 @@ func getEmployee(employees []Employee, id int) *Employee{
 		} 
 	}
 	return &employee;
+}
+
+func structEmbedding() {
+	type Point struct {
+		X, Y int
+	}
+
+	type Circle struct {
+		Point
+		Radius int
+	}
+
+	type Wheel struct {
+		Circle
+		Spokes int
+	}
+
+	var w Wheel;
+	w.Y = 2
+	w.Radius = 3;
 }

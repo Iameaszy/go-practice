@@ -6,7 +6,7 @@ import (
 )
 
 
-func main() {
+func init() {
 	var a [3]int;
 	var a2 [3]int = [3]int{1,2 ,3}
 	a3  := [3]int{4,5, 6}
@@ -19,6 +19,7 @@ func main() {
 	fmt.Println(len(a));
 	fmt.Println(a[len(a) -1]);
 
+	fmt.Printf("a2[:0] %v\n",a2[:1])
 	// for i := range a {
 	// 	fmt.Println(i)
 	// }

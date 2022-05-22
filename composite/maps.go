@@ -6,7 +6,7 @@ import (
 )
 
 
-func main() {
+func init() {
 	var person map[string]string = map[string]string{
 		"firstName": "Yusuf",
 		"lastName": "Adeniyi",
